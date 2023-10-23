@@ -7,7 +7,7 @@ import asyncio, json, os
 from methods import *
 
 with open('token.json','r') as file:
-    token = json.load(file)['token']
+    token = json.load(file)
 
 
 intents = discord.Intents.default()
@@ -64,4 +64,4 @@ async def ls(ctx):
 
 
 
-bot.run(token)
+bot.run(token['token'])
