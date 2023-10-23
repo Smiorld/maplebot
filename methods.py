@@ -104,10 +104,10 @@ def get_the_bill(partylog: dict, party: list, ign: str):
             leechtime[last_partynumber] += partylog[key]["time"] - last_timestamp
     response += f'player {ign}_leave party at { timestamp2str(currenttimestamp) }, party members { party }\n'
     leechtime[last_partynumber] += currenttimestamp - last_timestamp
-    leechtime[1]=leechtime[1]/3600.0
-    leechtime[2]=leechtime[2]/3600.0
-    leechtime[3]=leechtime[3]/3600.0
-    leechtime[4]=leechtime[4]/3600.0
+    leechtime[1]=round(leechtime[1]/3600.0,3)
+    leechtime[2]=round(leechtime[2]/3600.0,3)
+    leechtime[3]=round(leechtime[3]/3600.0,3)
+    leechtime[4]=round(leechtime[4]/3600.0,3)
     # 输出其在不同队伍人数下待的时间
     response += f'{ign} leech in solo: {leechtime[1]} hrs, duo: {leechtime[2]} hrs, 3 buyers: {leechtime[3]} hrs, 4 buyers: {leechtime[4]} hrs.'
 
