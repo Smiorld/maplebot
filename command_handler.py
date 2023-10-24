@@ -191,10 +191,10 @@ class BotCommandHandler:
         if is_pause ==0 :
             leechtime[last_partynumber] += currenttime - last_log.timestamp
         hours = []
-        hours.append(leechtime[1].seconds/3600.0)
-        hours.append(leechtime[2].seconds/3600.0)
-        hours.append(leechtime[3].seconds/3600.0)
-        hours.append(leechtime[4].seconds/3600.0)
+        hours.append(round(leechtime[1].seconds/3600.0,3))
+        hours.append(round(leechtime[2].seconds/3600.0,3))
+        hours.append(round(leechtime[3].seconds/3600.0,3))
+        hours.append(round(leechtime[4].seconds/3600.0,3))
         # 输出其在不同队伍人数下待的时间
         response += f'player {ign} leech in solo: {hours[0]} hrs, duo: {hours[1]} hrs, 3 buyers: {hours[2]} hrs, 4 buyers: {hours[3]} hrs.'
 
