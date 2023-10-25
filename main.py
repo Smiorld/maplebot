@@ -6,7 +6,7 @@ from data_manager import LogEntry, DataManager
 with open('token.json', 'r') as file:
     token = json.load(file)
 
-ADMIN_USERS = ['t2julius']
+ADMIN_USERS = ['t2julius','dachu233']
 
 intents = discord.Intents.default()
 intents.message_content = True
