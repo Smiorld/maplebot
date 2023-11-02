@@ -218,8 +218,8 @@ class BotCommandHandler:
         response += f'player {ign} leech in solo: {round(hours[0],3)} hrs, duo: {round(hours[1],3)} hrs, 3 buyers: {round(hours[2],3)} hrs, 4 buyers: {round(hours[3],3)} hrs. Total in party time: {round(hours[4],3)} hrs\n\n'
 
         # TODO: 接受系数设定并直接输出应付金额
-        response += 'For 1/ 2/ 3/ 4 buyers, we charge 6.93m/ 6.0m/ 5.26m/ 4.74m per hour.\n'
-        response += f'Total: {self.stringfy_meso(6.93*hours[0]+6.0*hours[1]+5.26*hours[2]+4.74*hours[3])} meso'
+        response += 'For 1/ 2/ 3/ 4 buyers, we charge 11.0m/ 6.0m/ 5.26m/ 4.74m per hour.\n'
+        response += f'Total: {self.stringfy_meso(11.0*hours[0]+6.0*hours[1]+5.26*hours[2]+4.74*hours[3])} meso'
         return response
 
     @staticmethod
